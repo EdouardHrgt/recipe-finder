@@ -1,0 +1,218 @@
+:root {
+    /* NEUTRALS */
+    --neutral-900: #163A34;
+    --neutral-600: #395852;
+    --neutral-300: #D0DCD9;
+    --neutral-200: #e0e6e3;
+    --neutral-0: #ffffff;
+    /* COLORS */
+    --orange-500: #fe9f6b;
+    --teal-500: #49ac9b;
+    --indigo-500: #697ddb;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.tp-1 {
+    font-size: 72px;
+    line-height: 110%;
+    letter-spacing: -2px;
+}
+
+.tp-2 {
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -2px;
+}
+
+.tp-3 {
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -1px;
+}
+
+.tp-4 {
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1px;
+}
+
+.tp-5 {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+}
+
+.tp-6 {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+}
+
+.tp-7 {
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+}
+
+.tp-8 {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+}
+
+.tp-9 {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+}
+
+.tp-10 {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+}
+
+body {
+    background-color: var(--neutral-200);
+}
+
+/* === HEADER  MENU === */
+header {
+    border-bottom: 2px solid var(--neutral-300);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    margin-bottom: 80px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header li a {
+    color: var(--neutral-900);
+    padding-bottom: 4px;
+}
+
+header li a:hover {
+    border-bottom: 3px solid var(--orange-500);
+}
+
+header button {
+    background-color: var(--neutral-900);
+    border-radius: 10px;
+    padding: 12px 18.6px;
+    transition: background-color 0.3s;
+}
+
+header button:hover,
+.explore:hover {
+    background-color: var(--neutral-600);
+}
+
+header button a {
+    color: var(--neutral-0);
+}
+
+#burger {
+    display: none;
+}
+
+/* === TITLE BOX === */
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    color: var(--neutral-900);
+    position: relative;
+    z-index: 1;
+}
+
+main h1::before {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    width: 255px;
+    height: 39px;
+    background-color: var(--orange-500);
+    opacity: 0.4;
+    bottom: 0;
+    z-index: -1;
+}
+
+main p {
+    color: var(--neutral-600);
+    max-width: 570px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+main .explore {
+    background-color: var(--neutral-900);
+    border-radius: 10px;
+    padding: 16px 38.3px; 
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+.explore a {
+    color: var(--neutral-0);
+}
+
+
+
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 1024px) {
+    .tp-1 {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 800px) {
+    .tp-1 {
+        font-size: 52px;
+    }
+
+    .tp-2 {
+        font-size: 40px;
+    }
+}
