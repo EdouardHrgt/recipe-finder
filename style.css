@@ -112,12 +112,14 @@ header {
     justify-content: space-between;
     padding: 1rem 3rem;
     margin-bottom: 80px;
+    position: relative;
 }
 
 header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 header ul {
@@ -188,7 +190,7 @@ main p {
 main .explore {
     background-color: var(--neutral-900);
     border-radius: 10px;
-    padding: 16px 38.3px; 
+    padding: 16px 38.3px;
     margin: 0 auto;
     transition: background-color 0.3s;
 }
@@ -205,6 +207,34 @@ main .explore {
     .tp-1 {
         font-size: 64px;
     }
+
+    /* === HEADER  MENU === */
+    header nav {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 73px;
+        z-index: 10;
+        background-color: var(--neutral-0);
+        width: 100%;
+        padding: 4rem 2rem;
+        display: none;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    header button {
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+
+    #burger {
+        display: inline-block;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 800px) {
@@ -215,4 +245,10 @@ main .explore {
     .tp-2 {
         font-size: 40px;
     }
+}
+
+@media (min-width: 1025px) {
+       header nav {
+        display: flex;
+    } 
 }
