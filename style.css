@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 :root {
     /* NEUTRALS */
     --neutral-900: #163A34;
     --neutral-600: #395852;
     --neutral-300: #D0DCD9;
     --neutral-200: #e0e6e3;
+    --neutral-100: #FAF9F9;
     --neutral-0: #ffffff;
     /* COLORS */
     --orange-500: #fe9f6b;
@@ -15,7 +17,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 img {
@@ -74,6 +76,7 @@ button {
     font-size: 20px;
     line-height: 150%;
     letter-spacing: -0.4px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 .tp-7 {
@@ -86,22 +89,25 @@ button {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.3px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 .tp-9 {
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.3px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 .tp-10 {
     font-size: 14px;
     line-height: 150%;
     letter-spacing: -0.3px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 body {
-    background-color: var(--neutral-200);
+    background-color: var(--neutral-100);
 }
 
 /* === HEADER  MENU === */
@@ -156,50 +162,6 @@ header button a {
 #burger {
     display: none;
 }
-
-/* === TITLE BOX === */
-
-main {
-    text-align: center;
-}
-
-main h1 {
-    color: var(--neutral-900);
-    position: relative;
-    z-index: 1;
-}
-
-main h1::before {
-    content: '';
-    position: absolute;
-    border-radius: 4px;
-    width: 255px;
-    height: 39px;
-    background-color: var(--orange-500);
-    opacity: 0.4;
-    bottom: 0;
-    z-index: -1;
-}
-
-main p {
-    color: var(--neutral-600);
-    max-width: 570px;
-    margin: 1.5rem auto 2.5rem;
-}
-
-main .explore {
-    background-color: var(--neutral-900);
-    border-radius: 10px;
-    padding: 16px 38.3px;
-    margin: 0 auto;
-    transition: background-color 0.3s;
-}
-
-.explore a {
-    color: var(--neutral-0);
-}
-
-
 
 /* === RESPONSIVE DESIGN === */
 

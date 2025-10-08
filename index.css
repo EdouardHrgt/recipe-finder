@@ -1,0 +1,163 @@
+/* === TITLE BOX === */
+
+main {
+    text-align: center;
+    position: relative;
+    background-image: url('./assets/images/pattern-squiggle-1.svg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 170px;
+}
+
+main h1 {
+    color: var(--neutral-900);
+    position: relative;
+    z-index: 1;
+}
+
+main h1::before {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    width: 255px;
+    height: 39px;
+    background-color: var(--orange-500);
+    opacity: 0.4;
+    bottom: 0;
+    z-index: -1;
+}
+
+main p {
+    color: var(--neutral-600);
+    max-width: 570px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+main .explore {
+    background-color: var(--neutral-900);
+    border-radius: 10px;
+    padding: 16px 38.3px;
+    margin: 0 auto 80px;
+    transition: background-color 0.3s;
+}
+
+.explore a {
+    color: var(--neutral-0);
+}
+
+.hero-img,
+.services-list,
+.built-for {
+max-width: 1192px;
+}
+
+
+/* === HERO BANNER IMG === */
+.hero-img-wrapper {
+    margin: auto;
+    border-radius: 12px;
+    max-width: 1217px;
+    height: 555px;
+    background-color: var(--neutral-0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    display: block;
+    border-radius: 12px;
+    height: 530px;
+}
+
+.hero-img-small {
+    display: none;
+}
+
+/* === SERVICES LIST === */
+.services-title {
+    margin: 96px auto 48px;
+}
+
+.services-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 96px;
+    border-bottom: 2px solid var(--neutral-300);
+}
+
+.services-list li {
+    text-align: left;
+    max-width: 376px;
+}
+
+.services-list li p {
+    margin: 0;
+}
+
+.services-list strong {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.services-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: var(--neutral-0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+/* === BUILT FOR SECTION === */
+.built-for {
+    margin: 96px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.built-for-txt {
+    text-align: left;
+    max-width: 509px;
+}
+
+h2 {
+    color: var(--neutral-900);
+}
+
+.built-for-txt p {
+    color: var(--neutral-600);
+}
+
+.built-for-txt span {
+    position: relative;
+}
+
+.built-for-txt span::after {
+content: '';
+background-color: var(--orange-500);
+width: 100%;
+height: 35%;
+position: absolute;
+bottom: 3px;
+left: 0;
+z-index: -1;
+border-radius: 3px;
+
+}
+
+.built-for-img {
+    border-radius: 16px;
+    max-width: 635px;
+    height: 450px;
+    background-image: url('./assets/images/image-home-real-life-large.webp');
+    background-size: contain;
+    border: 2px solid green;
+    flex: 1;
+}
