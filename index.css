@@ -47,8 +47,9 @@ main .explore {
 
 .hero-img,
 .services-list,
-.built-for {
-max-width: 1192px;
+.built-for,
+.hero-img-wrapper {
+    max-width: 1192px;
 }
 
 
@@ -56,19 +57,16 @@ max-width: 1192px;
 .hero-img-wrapper {
     margin: auto;
     border-radius: 12px;
-    max-width: 1217px;
-    height: 555px;
+    padding: 15px;
     background-color: var(--neutral-0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
 .hero-img {
     display: block;
     border-radius: 12px;
-    height: 530px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .hero-img-small {
@@ -140,15 +138,15 @@ h2 {
 }
 
 .built-for-txt span::after {
-content: '';
-background-color: var(--orange-500);
-width: 100%;
-height: 35%;
-position: absolute;
-bottom: 3px;
-left: 0;
-z-index: -1;
-border-radius: 3px;
+    content: '';
+    background-color: var(--orange-500);
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    z-index: -1;
+    border-radius: 3px;
 
 }
 
@@ -156,8 +154,77 @@ border-radius: 3px;
     border-radius: 16px;
     max-width: 635px;
     height: 450px;
-    background-image: url('./assets/images/image-home-real-life-large.webp');
-    background-size: contain;
-    border: 2px solid green;
-    flex: 1;
+}
+
+.built-for-img-small {
+    display: none;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1250px) {
+    .hero-img-wrapper {
+        max-width: calc(100% - 3rem);
+        height: auto;
+
+    }
+
+    .hero-img {
+        display: block;
+        border-radius: 12px;
+        height: 530px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .hero-img,
+    .services-list,
+    .built-for,
+    .hero-img-wrapper {
+        max-width: 100%;
+        border: 2px solid lightseagreen;
+    }
+
+    .hero-img-wrapper {
+        margin: auto;
+        max-width: fit-content;
+        height: fit-content;
+        padding: 15px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-img-small {
+        display: block;
+        border-radius: 12px;
+    }
+
+    .services-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .built-for {
+        flex-direction: column;
+    }
+
+    .built-for-img {
+        display: none;
+    }
+
+    .built-for-img-small {
+        display: block;
+        aspect-ratio: 16 / 9;
+        border-radius: 16px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .built-for-txt {
+        text-align: center;
+    }
 }
