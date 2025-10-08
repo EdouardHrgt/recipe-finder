@@ -49,7 +49,7 @@ main .explore {
 .services-list,
 .built-for,
 .hero-img-wrapper {
-    max-width: 1192px;
+    max-width: var(--xl-box);
 }
 
 
@@ -127,6 +127,7 @@ main .explore {
 
 h2 {
     color: var(--neutral-900);
+    font-weight: 900;
 }
 
 .built-for-txt p {
@@ -226,5 +227,21 @@ h2 {
 @media (max-width: 800px) {
     .built-for-txt {
         text-align: center;
+    }
+
+    .hero-img-wrapper {
+        padding: 8px;
+    }
+
+    .services-list {
+        align-items: baseline;
+        padding: 0 7px;
+    }
+
+    .services-list li {
+        max-width: 100%;
+    }
+    .built-for  {
+        padding: 0 7px;
     }
 }
