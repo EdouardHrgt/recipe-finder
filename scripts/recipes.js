@@ -1,7 +1,6 @@
 let recipes = [];
+let selectedRecipe ={};
 const recipesGrid = document.querySelector(".recipes-grid");
-
-
 
 fetch("../data.json")
   .then((response) => response.json())
@@ -9,7 +8,17 @@ fetch("../data.json")
     recipes = data;
     recipes.forEach((recipe) => {
       createRecipeCard(recipe);
-    })
+    });
+
+    const recipeBtns = document.querySelectorAll(".recipe-view");
+
+    recipeBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectedRecipe = recipes.find((recipe) => +recipe.id === +btn.dataset.id );
+        localStorage.setItem('recipe', JSON.stringify(selectedRecipe));
+        window.location.href = "recipe.html";
+      });
+    });
   });
 
 let userSettings = { prepTime: null, maxCookTime: null, search: null };
