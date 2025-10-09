@@ -100,13 +100,15 @@
 #myForm {
   position: relative;
   margin-left: auto;
+  display: block;
 }
-#myForm input {
+#ingredient {
   border: none;
   height: 47px;
   padding-left: 40px;
   border-radius: 10px;
   width: 310px;
+  display: block;
 }
 
 #myForm img {
@@ -117,3 +119,103 @@
   transform: translateY(50%);
 }
 
+/* === RECIPES GRID === */
+.recipe-wrapper {
+  background-color: var(--neutral-0);
+  border-radius: 16px;
+  padding: 7px;
+  max-width: 376px;
+}
+
+.recipe-wrapper img {
+  border-radius: 16px;
+}
+
+.recipe-img-small {
+  display: none;
+}
+
+.recipe-view {
+  width: 100%;
+  border-radius: 999px;
+  background-color: var(--neutral-900);
+  height: 48px;
+  color: var(--neutral-0);
+  transition: background-color 0.3s;
+}
+
+.recipe-wrapper .recipe-view:hover {
+  background-color: var(--neutral-600);
+}
+
+.recipe-title,
+.recipe-info-txt {
+  color: var(--neutral-900);
+  font-weight: bold;
+}
+
+.recipe-detail {
+  color: var(--neutral-600);
+  font-weight: 500;
+}
+
+.recipe-title {
+  margin: 1rem 0 0.5rem;
+}
+
+.recipe-infos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 15px;
+}
+
+.recipe-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 7px;
+}
+
+.recipe-info-2 {
+  margin-inline: 1.5rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .recipe-wrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+  .prep-time-menu-wrapper,
+  .cooking-time-wrapper,
+  .prep-time-menu-title,
+  .cooking-time-menu-title,
+  #myForm,
+  #ingredient {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .recipes-sort-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #myForm {
+    margin-left: 0;
+  }
+
+  #ingredient {
+    margin-inline: auto;
+  }
+  .recipe-img-small {
+    display: block;
+  }
+  .recipe-img-lg {
+    display: none;
+  }
+  .recipe-wrapper {
+    padding: 7px;
+  }
+}
