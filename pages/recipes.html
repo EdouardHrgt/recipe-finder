@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/recipes.css">
+  <link rel="stylesheet" href="../styles/recipes.css" />
   <title>Recipe finder - Recipes page</title>
   <script src="../scripts/app.js" defer></script>
   <script src="../scripts/recipes.js" defer></script>
@@ -46,35 +46,91 @@
     <section class="recipes-title-box">
       <h1 class="tp-2">Explore our simple, healthy recipes</h1>
       <p class="tp-6">
-        Discover eight quick, whole-food dishes
-        that fit real-life schedules and taste amazing. Use the search bar to find a
-        recipe by name or ingredient, or simply scroll the list and let something
-        delicious catch your eye.
+        Discover eight quick, whole-food dishes that fit real-life schedules
+        and taste amazing. Use the search bar to find a recipe by name or
+        ingredient, or simply scroll the list and let something delicious
+        catch your eye.
       </p>
     </section>
     <section class="recipes-wrapper">
       <div class="recipes-sort-bar">
+        <!-- MAX PREPARATION TIME SELECTOR -->
         <div class="prep-time-menu-wrapper">
           <div class="prep-time-menu-title">
             <p class="tp-7">Max Prep Time</p>
-            <img src="../assets/images/icon-chevron-down.svg" alt="Open the prep time menu">
+            <img src="../assets/images/icon-chevron-down.svg" alt="Open the prep time menu" />
           </div>
           <div class="prep-time-menu">
-            <button data-value="0">0 minutes</button>
-            <button data-value="5">5 minutes</button>
-            <button data-value="10">10 minutes</button>
+            <button data-value="0">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              0 minutes
+            </button>
+            <button data-value="5">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              5 minutes
+            </button>
+            <button data-value="10">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              10 minutes
+            </button>
             <button data-value="-1">Clear</button>
           </div>
         </div>
+        <!-- MAX COOKING TIME SELECTOR -->
+        <div class="cooking-time-wrapper">
+          <div class="cooking-time-menu-title">
+            <p class="tp-7">Max Cook Time</p>
+            <img src="../assets/images/icon-chevron-down.svg" alt="Open the prep time menu" />
+          </div>
+          <div class="cooking-time-menu">
+            <button data-value="0">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              0 minutes
+            </button>
+            <button data-value="10">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              10 minutes
+            </button>
+            <button data-value="15">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              15 minutes
+            </button>
+            <button data-value="20">
+              <div class="val-circle">
+                <div class="inner-val-circle"></div>
+              </div>
+              20 minutes
+            </button>
+            <button data-value="-1">Clear</button>
+          </div>
+        </div>
+        <form id="myForm">
+          <img src="../assets/images/icon-search.svg" alt="">
+          <input type="text" name="ingredient" id="ingredient" placeholder="Search by ingredient...">
+        </form>
       </div>
     </section>
-
   </main>
   <section id="ready">
     <h2 class="tp-2" id="ready-h2">Ready to cook smarter?</h2>
-    <p class="tp-6" id="ready-p">Hit the button, pick a recipe, and get dinner on the
-      table—fast.</p>
-    <button class="btn" id="ready-btn"><a href="./recipes.html" class="tp-7">Browse recipes</a></button>
+    <p class="tp-6" id="ready-p">
+      Hit the button, pick a recipe, and get dinner on the table—fast.
+    </p>
+    <button class="btn" id="ready-btn">
+      <a href="./recipes.html" class="tp-7">Browse recipes</a>
+    </button>
   </section>
   <footer>
     <p class="tp-9">Made with ❤️ and 🥑</p>

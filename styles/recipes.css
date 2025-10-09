@@ -17,44 +17,103 @@
   margin: auto;
 }
 
-/* === RECIPES === */
+/* === RECIPES SEARCH BAR === */
 .recipes-sort-bar {
-    max-width: var(--xl-box);
+  max-width: var(--xl-box);
   display: flex;
   align-items: center;
-  background-color: var(--neutral-200);
-  margin: 0 auto 5rem ;
-}
-.prep-time-menu-wrapper {
-}
-.prep-time-menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: var(--neutral-0);
-    border-radius: 10px;
-    width: 181px;
-    height: 47px;
-    cursor: pointer;
+  margin: 0 auto 5rem;
+  gap: 1.5rem;
 }
 
-.prep-time-menu {
-    /* WHAT NEEDS TO BE DISPLAYED WHEN TITLE IS CLICKED */
-    border: 3px solid rgb(62, 89, 117);
-    background-color: var(--neutral-0);
-    display: none;
+.cooking-time-wrapper,
+.prep-time-menu-wrapper {
+  position: relative;
+}
+
+.prep-time-menu-title,
+.cooking-time-menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--neutral-0);
+  border-radius: 10px;
+  width: 181px;
+  height: 47px;
+  cursor: pointer;
+}
+
+.prep-time-menu,
+.cooking-time-menu {
+  border: 1px solid var(--neutral-300);
+  background-color: var(--neutral-0);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  display: none;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 15;
+  width: 240px;
+}
+
+.cooking-time-menu {
+  z-index: 16;
 }
 
 .visible {
-    display: block;
+  display: block;
 }
 
-.prep-time-menu button  {
-    width: 100%;
-    margin: 3px 0;
-    border: .5px solid red;
-    padding: 7px 0;
+.prep-time-menu button,
+.cooking-time-menu button {
+  width: 100%;
+  margin: 3px 0;
+  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  font-weight: 600;
 }
 
+.val-circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-border {
+  border: 1px solid var(--neutral-900);
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: var(--neutral-900);
+}
+
+/* === RECIPES FORM=== */
+#myForm {
+  position: relative;
+  margin-left: auto;
+}
+#myForm input {
+  border: none;
+  height: 47px;
+  padding-left: 40px;
+  border-radius: 10px;
+  width: 310px;
+}
+
+#myForm img {
+  position: absolute;
+  z-index: 14;
+  bottom: 50%;
+  left: 10px;
+  transform: translateY(50%);
+}
 
