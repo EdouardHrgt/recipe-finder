@@ -120,6 +120,16 @@
 }
 
 /* === RECIPES GRID === */
+.recipes-grid {
+  max-width: var(--xl-box);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  border-bottom: 2px solid var(--neutral-300);
+  padding-bottom: 96px;
+}
+
 .recipe-wrapper {
   background-color: var(--neutral-0);
   border-radius: 16px;
@@ -197,6 +207,10 @@
 }
 
 @media (max-width: 800px) {
+  .recipes-grid {
+    padding-bottom: 40px;
+  }
+
   .recipes-sort-bar {
     flex-direction: column;
     gap: 10px;
