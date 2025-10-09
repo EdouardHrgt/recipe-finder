@@ -321,6 +321,7 @@ footer svg:hover {
 
   #ready {
     background-image: none;
+    padding: 48px 0;
   }
 
   #ready-p {

@@ -107,6 +107,56 @@ h3 {
     contain;
 }
 
+/* === BEYOND THE PLATE SECTION === */
+.beyond {
+  max-width: var(--xl-box);
+  margin: 0 auto var(--v-space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.beyond-txt {
+  max-width: 376px;
+}
+
+.beyond-txt h2 {
+  color: var(--neutral-900);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.beyond-txt p {
+  margin-bottom: 20px;
+}
+
+.beyond-txt p {
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.beyond-txt ul {
+  margin-left: 2.2rem;
+}
+
+.beyond-txt li {
+  list-style: inside;
+  list-style-position: outside;
+  color: var(--neutral-600);
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.beyond-img img {
+  border-radius: 16px;
+}
+
+.beyond-img-small {
+  display: none;
+}
+
+
 /* === RESPONSIVE DESIGN === */
 
 @media (max-width: 1024px) {
@@ -135,6 +185,19 @@ h3 {
   .about-list-wrapper li {
     margin-bottom: 1.5rem;
   }
+
+  .beyond {
+  max-width: var(--l-box);
+  margin: 0 auto var(--v-space-s);
+  flex-direction: column;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.beyond-txt {
+  max-width: 650px;
+}
+
 }
 
 @media (max-width: 800px) {
@@ -158,5 +221,13 @@ h3 {
 
   .list-flex {
     padding: 48px 0;
+  }
+
+  .beyond-img-small {
+    display: block;
+  }
+
+  .beyond-img-lg {
+    display: none;
   }
 }
