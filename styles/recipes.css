@@ -1,0 +1,60 @@
+/* === TITLE BOX === */
+.recipes-title-box {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.recipes-title-box h1 {
+  color: var(--neutral-900);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.recipes-title-box p {
+  color: var(--neutral-600);
+  font-weight: 600;
+  max-width: 724px;
+  margin: auto;
+}
+
+/* === RECIPES === */
+.recipes-sort-bar {
+    max-width: var(--xl-box);
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-200);
+  margin: 0 auto 5rem ;
+}
+.prep-time-menu-wrapper {
+}
+.prep-time-menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--neutral-0);
+    border-radius: 10px;
+    width: 181px;
+    height: 47px;
+    cursor: pointer;
+}
+
+.prep-time-menu {
+    /* WHAT NEEDS TO BE DISPLAYED WHEN TITLE IS CLICKED */
+    border: 3px solid rgb(62, 89, 117);
+    background-color: var(--neutral-0);
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.prep-time-menu button  {
+    width: 100%;
+    margin: 3px 0;
+    border: .5px solid red;
+    padding: 7px 0;
+}
+
+

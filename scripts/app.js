@@ -1,3 +1,4 @@
+// ===== MENU TOOGLE FUNCTION ===== 
 const burger = document.getElementById('burger');
 const menu = document.getElementById('toggle-menu');
 

@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Frontend Mentor | Recipe finder website</title>
+  <script src="./scripts/app.js" defer></script>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/about.css">
+  <title>Recipe finder - About page</title>
+
 </head>
 
 <body>
@@ -25,7 +27,7 @@
     <nav id="toggle-menu">
       <div></div>
       <ul>
-        <li><a href="./index.html" class="tp-7">Home</a></li>
+        <li><a href="../index.html" class="tp-7">Home</a></li>
         <li><a href="./about.html" class="tp-7">About</a></li>
         <li><a href="./recipes.html" class="tp-7">Recipes</a></li>
       </ul>
@@ -40,11 +42,133 @@
         clip-rule="evenodd" />
     </svg>
   </header>
-  <section class="ready">
-    <h2 class="tp-2">Ready to cook smarter?</h2>
-    <p class="tp-6">Hit the button, pick a recipe, and get dinner on the
-      table—fast.</p>
-    <button class="btn"><a href="./recipes.html" class="tp-7">Browse recipes</a></button>
+
+  <main>
+    <section class="title-banner">
+      <div class="title-box">
+        <p class="up-title tp-5">Our mission</p>
+        <h1 class="tp-2">
+          Help more people cook nourishing meals, more often.
+        </h1>
+        <p class="tp-6">
+          Healthy Recipe Finder was created to prove that healthy eating can
+          be convenient, affordable, and genuinely delicious.
+        </p>
+        <p class="tp-6 last-title-p">
+          We showcase quick, whole-food dishes that anyone can master—no fancy
+          equipment, no ultra-processed shortcuts—just honest ingredients and
+          straightforward steps.
+        </p>
+      </div>
+      <div class="title-img-wrapper">
+        <img class="title-img-lg" src="../assets/images/image-about-our-mission-large.webp"
+          alt="A women cutting carrots" />
+        <img class="title-img-small" src="../assets/images/image-about-our-mission-large.webp"
+          alt="A women cutting carrots" />
+      </div>
+    </section>
+
+    <section class="about-list-wrapper">
+      <div class="list-flex why-we-exist">
+        <h2 class="tp-2">Why we exist</h2>
+        <ul class="icon-list">
+          <li>
+            <h3 class="tp-4">Cut through the noise.</h3>
+            <p class="tp-6">
+              The internet is bursting with recipes, yet most busy cooks still
+              default to take-away or packaged foods. We curate a tight
+              collection of fool-proof dishes so you can skip the scrolling
+              and start cooking.
+            </p>
+          </li>
+          <li>
+            <h3 class="tp-4">Empower home kitchens.</h3>
+            <p class="tp-6">
+              When you control what goes into your meals, you control how you
+              feel. Every recipe is built around unrefined ingredients and
+              ready in about half an hour of active prep.
+            </p>
+          </li>
+          <li>
+            <h3 class="tp-4">Make healthy look good.</h3>
+            <p class="tp-6">
+              High-resolution imagery shows you exactly what success looks
+              like—because we eat with our eyes first, and confidence matters.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list-flex our-philosophy">
+        <h2 class="tp-2">Our food philosophy</h2>
+        <ul class="icon-list">
+          <li>
+            <h3 class="tp-4">Whole ingredients first.</h3>
+            <p class="tp-6">
+              Fresh produce, grains, legumes, herbs, and quality fats form the
+              backbone of every recipe.
+            </p>
+          </li>
+          <li>
+            <h3 class="tp-4">Flavor without compromise.</h3>
+            <p class="tp-6">
+              Spices, citrus, and natural sweetness replace excess salt,
+              sugar, and additives.
+            </p>
+          </li>
+          <li>
+            <h3 class="tp-4">Respect for time.</h3>
+            <p class="tp-6">
+              Weeknight meals should slot into real schedules; weekend cooking
+              can be leisurely but never wasteful.
+            </p>
+          </li>
+          <li>
+            <h3 class="tp-4">Sustainable choices.</h3>
+            <p class="tp-6">
+              Short ingredient lists cut down on food waste and carbon
+              footprint, while plant-forward dishes keep things
+              planet-friendly.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="beyond">
+      <div class="beyond-txt">
+        <h2 class="tp-2">Beyond the plate</h2>
+        <p class="tp-6">
+          We believe food is a catalyst for community and well-being. By
+          sharing approachable recipes, we hope to:
+        </p>
+        <ul>
+          <li class="tp-6 styled-list">
+            Encourage family dinners and social cooking.
+          </li>
+          <li class="tp-6 styled-list">
+            Reduce reliance on single-use packaging and delivery waste.
+          </li>
+          <li class="tp-6 styled-list">
+            Spark curiosity about seasonal produce and local agriculture.
+          </li>
+        </ul>
+      </div>
+      <div class="beyond-img">
+        <img src="../assets/images/image-about-beyond-the-plate-large.webp" alt="a family cooking together"
+          class="beyond-img-lg" />
+        <img src="../assets/images/image-about-beyond-the-plate-small.webp" alt="a family cooking together"
+          class="beyond-img-small" />
+      </div>
+    </section>
+  </main>
+  <section id="ready">
+    <h2 class="tp-2" id="ready-h2">Ready to cook smarter?</h2>
+    <p class="tp-6" id="ready-p">
+      Hit the button, pick a recipe, and get dinner on the table—fast.
+    </p>
+    <button class="btn" id="ready-btn">
+      <a href="./recipes.html" class="tp-7">Browse recipes</a>
+    </button>
   </section>
   <footer>
     <p class="tp-9">Made with ❤️ and 🥑</p>
@@ -80,18 +204,6 @@
       </li>
     </ul>
   </footer>
-
-  <div style="display: none">
-    Explore our simple, healthy recipes Discover eight quick, whole-food dishes
-    that fit real-life schedules and taste amazing. Use the search bar to find a
-    recipe by name or ingredient, or simply scroll the list and let something
-    delicious catch your eye. Max Prep Time Max Cook Time Search by name or
-    ingredient...
-  </div>
-
-  <!-- Populate recipes using data from the data.json file -->
-
-  Made with ❤️ and 🥑
 </body>
 
 </html>

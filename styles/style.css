@@ -188,6 +188,8 @@ header li a:hover {
 
 #burger {
   display: none;
+  width: 24px;
+  height: 24px;
 }
 
 /* === READY BANNER === */
@@ -198,8 +200,8 @@ header li a:hover {
   max-width: var(--xl-box);
   margin: auto;
   position: relative;
-  background-image: url("./assets/images/pattern-fork.svg"),
-    url("./assets/images/pattern-knife.svg");
+  background-image: url("../assets/images/pattern-fork.svg"),
+    url("../assets/images/pattern-knife.svg");
   background-position: left -70px bottom -20px, right -70px bottom -20px;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;

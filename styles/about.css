@@ -103,7 +103,7 @@ h3 {
   left: 0;
   width: 24px;
   height: 24px;
-  background: url("./assets/images/icon-bullet-point.svg") no-repeat center /
+  background: url("../assets/images/icon-bullet-point.svg") no-repeat center /
     contain;
 }
 
