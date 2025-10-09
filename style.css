@@ -15,6 +15,11 @@
 
   /* WIDTH */
   --xl-box: 1192px;
+  --l-box: calc(100% - 2.5rem);
+
+  /* VERTICAL SPACING */
+  --v-space-lg: 96px;
+  --v-space-s: 48px;
 }
 
 * {
@@ -129,6 +134,25 @@ body {
   background-color: var(--neutral-100);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-600);
+  border-radius: 4px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-500) var(--neutral-900);
+}
+
 /* === HEADER  MENU === */
 header {
   border-bottom: 2px solid var(--neutral-300);
@@ -167,7 +191,7 @@ header li a:hover {
 }
 
 /* === READY BANNER === */
-.ready {
+#ready {
   border-radius: 16px;
   background-color: var(--neutral-200);
   padding: 96px 0;
@@ -179,10 +203,21 @@ header li a:hover {
   background-position: left -70px bottom -20px, right -70px bottom -20px;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, contain;
+  text-align: center;
 }
 
-.ready .btn {
-  margin: auto;
+#ready-btn {
+  margin: 2rem auto 0;
+}
+
+#ready-h2 {
+  color: var(--neutral-900);
+  font-weight: 800;
+}
+
+#ready-p {
+  color: var(--neutral-600);
+  margin: 1.5rem 0;
 }
 
 /* === FOOTER === */
@@ -203,6 +238,16 @@ footer ul {
 
 footer li {
   cursor: pointer;
+}
+
+footer svg {
+  fill: var(--neutral-900);
+  transition: fill 0.3s;
+}
+
+footer svg:hover {
+  fill: var(--neutral-600);
+  box-shadow: 0 -4px 0 0 var(--orange-500);
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -240,8 +285,19 @@ footer li {
     cursor: pointer;
   }
 
-  footer {
-    max-width: 100%;
+  #ready {
+    background-position: left -35px bottom -10px, right -35px bottom 70px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 25%, 25%;
+  }
+
+  #ready-h2 {
+    margin-inline: auto;
+  }
+
+  footer,
+  #ready {
+    max-width: var(--l-box);
   }
 }
 
@@ -258,6 +314,19 @@ footer li {
     flex-direction: column-reverse;
     gap: 1rem;
   }
+
+  header {
+    margin-bottom: var(--v-space-s);
+  }
+
+  #ready {
+    background-image: none;
+  }
+
+  #ready-p {
+    padding: 0 1rem;
+  }
+
 }
 
 @media (min-width: 1025px) {
