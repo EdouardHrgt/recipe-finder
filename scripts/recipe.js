@@ -12,6 +12,11 @@ if (recipe) {
     .map((instruction) => `<li>${instruction}</li>`)
     .join("");
 
+  const arianne = document.querySelector(".arianne");
+  if (arianne) {
+    arianne.innerHTML += `<p class="arianne-p">${recipe.title}</p>`;
+  }
+
   const htmlRecipe = `
     <img class="recipe-card-img-lg" src="../assets/images/${recipe.image.large}" alt="${recipe.title}">
     <img class="recipe-card-img-small" src="../assets/images/${recipe.image.small}" alt="${recipe.title}">

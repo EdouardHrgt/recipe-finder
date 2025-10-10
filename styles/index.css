@@ -1,5 +1,11 @@
 /* === TITLE BOX === */
 
+#todo {
+  font-size: 68px;
+  color: red;
+  text-align: center;
+}
+
 main {
   text-align: center;
   position: relative;
