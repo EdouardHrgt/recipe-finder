@@ -1,5 +1,5 @@
 let recipes = [];
-let selectedRecipe ={};
+let selectedRecipe = {};
 const recipesGrid = document.querySelector(".recipes-grid");
 
 fetch("../data.json")
@@ -14,8 +14,16 @@ fetch("../data.json")
 
     recipeBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
-        selectedRecipe = recipes.find((recipe) => +recipe.id === +btn.dataset.id );
-        localStorage.setItem('recipe', JSON.stringify(selectedRecipe));
+        selectedRecipe = recipes.find(
+          (recipe) => +recipe.id === +btn.dataset.id
+        );
+        localStorage.setItem("RECIPE", JSON.stringify(selectedRecipe));
+        const recommended = [...recipes]
+          .filter((r) => r.id !== selectedRecipe.id)
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+
+        localStorage.setItem("RECOMMENDED", JSON.stringify(recommended));
         window.location.href = "recipe.html";
       });
     });
@@ -65,7 +73,7 @@ function createRecipeCard(recipe) {
   recipesGrid.innerHTML += `
           <div class="recipe-wrapper">
           <img class="recipe-img-lg" src="../assets/images${recipe.image.large}" alt="${recipe.overview}">
-          <img class="recipe-img-small" src="../assets/images${recipe.image.large}" alt="${recipe.overview}">
+          <img class="recipe-img-small" src="../assets/images${recipe.image.small}" alt="${recipe.overview}">
           <p class="recipe-title"><strong class="tp-5">${recipe.title}</strong></p>
           <p class="recipe-detail tp-9">${recipe.overview}</p>
           <div class="recipe-infos">

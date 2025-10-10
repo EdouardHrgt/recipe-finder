@@ -1,0 +1,141 @@
+.arianne {
+    max-width: var(--xl-box);
+    margin: 0 auto .8rem;
+}
+.recipe-card {
+    margin: 0 auto;
+    max-width: var(--xl-box);
+    border-bottom: 2px solid var(--neutral-300);
+    padding-bottom: 64px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.recipe-card img {
+    max-width: 580px;
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    object-fit: contain;
+}
+
+.recipe-card-img-small {
+    display: none;
+}
+
+.recipe-card-txt {
+    border: 2px solid lightseagreen;
+}
+
+.recipe-card h1,
+.recipe-card h2{
+  color: var(--neutral-900);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.recipe-card h2 {
+  margin-top: 1rem;
+}
+
+.recipe-card p {
+  color: var(--neutral-600);
+}
+
+.recipe-card li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: .6rem;
+}
+
+.recipe-card li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../assets/images/icon-bullet-point.svg") no-repeat center /
+    contain;
+}
+
+.recipe-card-infos {
+  display: flex;
+  align-items: center;
+}
+
+/* MORE RECIPES SECTION */
+.more-recipes-title {
+  max-width: var(--xl-box);
+  margin: 64px auto 24px;
+  color: var(--neutral-900);
+}
+
+.more-recipes {
+    max-width: var(--xl-box);
+    margin: 0 auto 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.recipe-wrapper {
+  background-color: var(--neutral-0);
+  border-radius: 16px;
+  padding: 7px;
+  max-width: 376px;
+}
+
+.recipe-wrapper img {
+  border-radius: 16px;
+}
+
+.recipe-img-small {
+  display: none;
+}
+
+.recipe-view {
+  width: 100%;
+  border-radius: 999px;
+  background-color: var(--neutral-900);
+  height: 48px;
+  color: var(--neutral-0);
+  transition: background-color 0.3s;
+}
+
+.recipe-wrapper .recipe-view:hover {
+  background-color: var(--neutral-600);
+}
+
+.recipe-title,
+.recipe-info-txt {
+  color: var(--neutral-900);
+  font-weight: bold;
+}
+
+.recipe-detail {
+  color: var(--neutral-600);
+  font-weight: 500;
+}
+
+.recipe-title {
+  margin: 1rem 0 0;
+  height: 60px;
+}
+
+.recipe-infos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 15px;
+}
+
+.recipe-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 7px;
+}
+
+.recipe-info-2 {
+  margin-inline: 1.5rem;
+}
