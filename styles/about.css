@@ -42,7 +42,22 @@ h1 {
 }
 
 .title-img-wrapper {
-  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+
+.title-img-wrapper::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/images/pattern-squiggle-2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 100px;
+  top: 57%; /* légèrement en dessous du centre */
+  right: -410px; /* dépasse de 50% de la div vers la droite */
+  z-index: 25; /* au-dessus des images */
 }
 
 .title-img-wrapper img {
@@ -156,7 +171,6 @@ h3 {
   display: none;
 }
 
-
 /* === RESPONSIVE DESIGN === */
 
 @media (max-width: 1024px) {
@@ -187,17 +201,16 @@ h3 {
   }
 
   .beyond {
-  max-width: var(--l-box);
-  margin: 0 auto var(--v-space-s);
-  flex-direction: column;
-  align-items: baseline;
-  gap: 40px;
-}
+    max-width: var(--l-box);
+    margin: 0 auto var(--v-space-s);
+    flex-direction: column;
+    align-items: baseline;
+    gap: 40px;
+  }
 
-.beyond-txt {
-  max-width: 650px;
-}
-
+  .beyond-txt {
+    max-width: 650px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -228,6 +241,10 @@ h3 {
   }
 
   .beyond-img-lg {
+    display: none;
+  }
+
+  .title-img-wrapper::after {
     display: none;
   }
 }

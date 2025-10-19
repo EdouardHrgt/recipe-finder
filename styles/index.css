@@ -1,7 +1,7 @@
 /* === TITLE BOX === */
 
 #todo {
-  font-size: 68px;
+  font-size: 32px;
   color: red;
   text-align: center;
 }
@@ -9,7 +9,7 @@
 main {
   text-align: center;
   position: relative;
-  background-image: url("./assets/images/pattern-squiggle-1.svg");
+  background-image: url("../assets/images/pattern-squiggle-1.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 170px;
